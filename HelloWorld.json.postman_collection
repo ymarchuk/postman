@@ -1,0 +1,72 @@
+{
+	"id": "75d34106-6e20-ac41-6a55-0d3cc562fbd2",
+	"name": "HelloWorld",
+	"description": "",
+	"order": [
+		"df9ab590-f9e8-3b87-44d5-384e0abf1b12",
+		"4fbdb43e-93b9-7a5a-7b4a-5f2701275b4f",
+		"7b16e1a7-f398-b382-562d-541a2be11eb4"
+	],
+	"folders": [],
+	"timestamp": 1415285101346,
+	"synced": false,
+	"requests": [
+		{
+			"id": "4fbdb43e-93b9-7a5a-7b4a-5f2701275b4f",
+			"headers": "",
+			"url": "http://freegeoip.net/json/205.251.242.54",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "checkIP",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1415285207552,
+			"version": 2,
+			"responses": [],
+			"tests": "var data = JSON.parse(responseBody);\ntests[\"checkIP\"] = data.ip === '205.251.242.54';",
+			"collectionId": "75d34106-6e20-ac41-6a55-0d3cc562fbd2",
+			"synced": false
+		},
+		{
+			"id": "7b16e1a7-f398-b382-562d-541a2be11eb4",
+			"headers": "",
+			"url": "http://freegeoip.net/json/205.251.242.54",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "status200",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1415285241978,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status200\"] = responseCode.code === 200;",
+			"collectionId": "75d34106-6e20-ac41-6a55-0d3cc562fbd2",
+			"synced": false
+		},
+		{
+			"id": "df9ab590-f9e8-3b87-44d5-384e0abf1b12",
+			"headers": "",
+			"url": "http://freegeoip.net/json/205.251.242.54",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"name": "checkHeader1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1415285101346,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Content-Type is present\"] = responseHeaders.hasOwnProperty(\"Content-Type\");",
+			"collectionId": "75d34106-6e20-ac41-6a55-0d3cc562fbd2",
+			"synced": false
+		}
+	]
+}
